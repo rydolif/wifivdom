@@ -1,6 +1,16 @@
 $(function() {
 
 
+//-------------------------------активна ссилка на якій знаходишся для меню---------------------------------------
+  $('.nav ul li a').each(function () {
+      var location = window.location.href;
+      var link = this.href; 
+      if(location == link) {
+          $(this).addClass('active');
+      }
+  });
+
+
 //------------------------------гамбургер-----------------------------
   $(".block__content").slideUp("slow");
   $(".block").first().addClass('block__header--active');

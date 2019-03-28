@@ -28,6 +28,10 @@
 	&__call
 		text-align: right
 		line-height: 1.2
+		font-size: 15px
+
+	&__nav
+		margin: 0 10%
 
 	
 .nav
@@ -46,14 +50,66 @@
 		z-index: 1
 		text-transform: uppercase
 		font-weight: 600
+		font-size: 16px
+
+	.active
+		text-decoration: underline
+		color: #f5f5f5
 
 
 .hero
 	background: linear-gradient(top, rgba(#a56b9c, 1), rgba(#7050a6, 1))
 	background-size: cover
 	background-repeat: no-repeat
-	padding: 295px 0 215px
+	padding: 15% 0
 	text-align: center
+	min-height: 100vh
+
+	&__sub-title
+		font-size: 20px
+		margin-bottom: 40px
+
+	a
+		color: #fc8877
+
+	&__form
+		margin-bottom: 20px
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		align-items: center
+
+		&_item
+			width: 40%
+
+		p
+			width: 100%
+
+.filter
+	margin-bottom: 60px
+
+
+
+.shape
+	position: relative
+	background: linear-gradient(top, rgba(#a56b9c, 1), rgba(#7050a6, 1))
+	background-size: cover
+	background-repeat: no-repeat
+	text-align: center
+	padding: 0 0 40px 0
+
+	&__wrap
+		position: absolute
+		top: -80px
+		width: 100vw
+		height: 60px
+
+		&::before
+			content: ''
+			border-bottom: 60px solid #a56b9c
+			border-left: 0px solid transparent
+			border-right: 100vw solid transparent
+			border-top: 40px solid transparent
 
 
 .main
@@ -61,6 +117,7 @@
 	padding-bottom: 80px
 	min-height: 100vh
 	background: #b47399
+
 
 .block
 	padding: 25px 30px
@@ -136,6 +193,56 @@
 			left: 0
 
 
+.internet
+
+	&__list
+		position: relative
+
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 30px
+			transform: translate(0, -50%)
+			height: 90%
+			width: 2px
+			background: #fff
+
+
+	&__item
+		position: relative
+		padding-left: 90px
+		margin-bottom: 40px
+		min-height: 60px
+
+		&:last-child
+			margin-bottom: 60px
+
+		&_img
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate(0, -50%)
+			width: 60px
+			height: 60px
+			border: 2px solid #fff
+			border-radius: 50%
+			background: #b47399
+
+			img
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				width: 98%
+				height: 98%
+
+	&__btn
+		display: flex
+		justify-content: center
+
+
+
 .footer
 	background: #6148aa
 	padding: 10px 40px
@@ -149,6 +256,14 @@
 	&__nav
 		a
 			text-transform: none
+			font-size: 14px
+
+		li
+			margin-right: 20px
+
+	&__call
+		font-weight: 600
+		font-size: 16px
 
 	&__up
 

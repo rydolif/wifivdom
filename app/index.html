@@ -21,9 +21,9 @@
 	<header class="header">
 		<div class="header__container">
 	
-			<div class="header__logo">
-				<a href="index.html"><img src="img/logo.png" alt="logo"></a>
-			</div>
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.png" alt="logo">
+			</a>
 
 			<button class="hamburger" type="button">
 				<span class="hamburger__box">
@@ -31,7 +31,7 @@
 				</span>
 			</button>
 
-			<nav class="nav">
+			<nav class="header__nav nav">
 				<ul>
 					<li><a href="/">Главная</li>
 					<li><a href="internet.html">Как подключить интернет?</a></li>
@@ -39,7 +39,7 @@
 				</ul>
 			</nav>
 
-			<div class="header__call">
+			<div class="header__call call">
 				<p>Консультация и подключение</p>
 				<a href="tel:+79657510526 ">+7(965) 751-05-26</a>
 				<p>Ежедневно с 10.00 до 22.00</p>
@@ -50,27 +50,72 @@
 		</div>
 	</header>
 
-	<section class="hero" id="hero">
+	<section class="hero">
 		<div class="container">
-			
-			<h1>Покажем все тарифы и акции интернет-провайдеров по вашему дому</h1>
-			<p>Вы определитесь за 5 минут и завтра вас уже подключат</p>
-			<form action="" class="hero__form">
-				
-			</form>
+			<div class="row justify-content-center">
+				<div class="col-xl-10">
+					<h1>Покажем все тарифы и акции <br>интернет-провайдеров <br>по вашему дому</h1>
+					<p class="hero__sub-title">Вы определитесь за 5 минут и завтра вас уже подключат</p>
+
+					<form action="sendmail.php" class="hero__form form" method="post">
+
+						<input type="hidden" name="subject" value="Узнать подробнее!">
+						<div class="hero__form_item">
+							<select name="" id="">
+								<option value="" disabled>Выберите город</option>
+								<option value="">Москва</option>
+								<option value="">Питер</option>
+							</select>
+						</div>
+						<div class="hero__form_item">
+							<input type="tel" name="phone" required placeholder="Введите улицу">
+						</div>
+						<div><button type="submit" class="btn btn--form" name="submit">Найти</button></div>
+						<p>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="policy.html">политикой конфиденциальности</a></p>
+
+					</form>
+				</div>
+			</div>			
 			
 		</div>
 	</section>
 
-	<section class="" id="">
+	<section class="filter">
 		<div class="container">
 
 		</div>
 	</section>
 
-	<section class="" id="">
-		<div class="container">
+	<section class="shape">
+		
+		<div class="shape__wrap"></div>
 
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-xl-10">
+					<h1>Запутались в тарифах? <br> Поможем вам с выбором!</h1>
+					<p class="hero__sub-title">Оставьте свои контакты и мы перезвоним через 10 минут. Это абсолютно бесплатно.</p>
+
+					<form action="sendmail.php" class="hero__form form" method="post">
+
+						<input type="hidden" name="subject" value="Узнать подробнее!">
+						<div class="hero__form_item">
+							<select name="" id="">
+								<option value="" disabled>Выберите город</option>
+								<option value="">Москва</option>
+								<option value="">Питер</option>
+							</select>
+						</div>
+						<div class="hero__form_item">
+							<input type="tel" name="phone" required placeholder="Введите улицу">
+						</div>
+						<div><button type="submit" class="btn btn--form" name="submit">Найти</button></div>
+						<p>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="policy.html">политикой конфиденциальности</a></p>
+
+					</form>
+				</div>
+			</div>			
+			
 		</div>
 	</section>
 
@@ -113,10 +158,14 @@
 
 					<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
 					<input type="hidden" name="subject" value="Узнать подробнее!">
-					<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
-					<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон"></div>
+					<div class="">
+						<input type="text" name="name" placeholder="Имя" required>
+					</div>
+					<div class="">
+						<input type="tel" name="phone" required placeholder="Телефон">
+					</div>
 					<div><button type="submit" class="btn footer__form_btn" name="submit">Отправить</button></div>
-					<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
+					<p>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="policy.html">политикой конфиденциальности</a></p>
 
 				</form>
 			</div>
