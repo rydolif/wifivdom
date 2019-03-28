@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Start</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="img/favicon.ico">
+	<meta name="theme-color" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css?v=1">
+
+</head>
+
+<body>
+
+	<span id="top"></span>
+
+	<header class="header">
+		<div class="header__container">
+	
+			<div class="header__logo">
+				<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+			</div>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__box">
+					<span class="hamburger__item"></span>
+				</span>
+			</button>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="/">Главная</li>
+					<li><a href="internet.html">Как подключить интернет?</a></li>
+					<li><a href="question.html">Вопрос-ответ</a></li>
+				</ul>
+			</nav>
+
+			<div class="header__call">
+				<p>Консультация и подключение</p>
+				<a href="tel:+79657510526 ">+7(965) 751-05-26</a>
+				<p>Ежедневно с 10.00 до 22.00</p>
+			</div>
+
+			<a href="#" class="btn">Вход</a>
+
+		</div>
+	</header>
+
+	<section class="hero" id="hero">
+		<div class="container">
+			
+			<h1>Покажем все тарифы и акции интернет-провайдеров по вашему дому</h1>
+			<p>Вы определитесь за 5 минут и завтра вас уже подключат</p>
+			<form action="" class="hero__form">
+				
+			</form>
+			
+		</div>
+	</section>
+
+	<section class="" id="">
+		<div class="container">
+
+		</div>
+	</section>
+
+	<section class="" id="">
+		<div class="container">
+
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<div class="footer__container">
+
+			<div class="footer__call">
+				<p>Консультация и подключение</p>
+				<a href="tel:+79657510526 ">+7(965) 751-05-26</a>
+				<p>Ежедневно с 10.00 до 22.00</p>
+			</div>
+
+			<nav class="footer__nav nav">
+				<ul>
+					<li><a href="/">Подключение домашнего интернета от любого провайдера</li>
+					<li><a href="internet.html">Как подключить интернет?</a></li>
+					<li><a href="question.html">Вопрос-ответ</a></li>
+					<li><a href="policy.html">Политика конфиденциальности</a></li>
+				</ul>
+			</nav>
+
+			<div class="footer__up click">
+				<a href="#top">
+					Наверх
+					<i class="fas fa-long-arrow-alt-up"></i>
+				</a>
+			</div>
+
+		</div>
+	</footer>
+
+
+	<!-- modal -->
+		<div class="modal" id="order">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form" method="post">
+
+					<button class="close order_close" type="button"></button>
+
+					<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
+					<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон"></div>
+					<div><button type="submit" class="btn footer__form_btn" name="submit">Отправить</button></div>
+					<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="modal" id="thanks">
+			<button class="close thanks_close" type="button"></button>
+
+			<h3>Спасибо <br>за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+	<!-- modal end-->
+
+	<script src="js/scripts.min.js"></script>
+
+
+</body>
+</html>

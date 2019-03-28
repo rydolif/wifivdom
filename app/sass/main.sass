@@ -1,0 +1,159 @@
+@import "libs"
+@import "base"
+
+
+.header
+	position: fixed
+	right: 0
+	left: 0
+	top: 0
+	padding: 10px 40px
+	transition: all .6s
+	z-index: 1001
+	background: linear-gradient(top, rgba(#a56b9c, .9), rgba(#7050a6, .9))
+	background-repeat: no-repeat
+	background-position: 0 -100px
+
+	&--active,
+	&--menu
+		background-position: 0 0
+		
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+	
+	&__call
+		text-align: right
+		line-height: 1.2
+
+	
+.nav
+	ul
+		display: flex
+		justify-content: space-between
+
+	li
+		margin-right: 55px
+
+		&:last-child
+			margin-right: 0
+
+	a
+		position: relative
+		z-index: 1
+		text-transform: uppercase
+		font-weight: 600
+
+
+.hero
+	background: linear-gradient(top, rgba(#a56b9c, 1), rgba(#7050a6, 1))
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 295px 0 215px
+	text-align: center
+
+
+.main
+	padding-top: 140px
+	padding-bottom: 80px
+	min-height: 100vh
+	background: #b47399
+
+.block
+	padding: 25px 30px
+
+	&__header
+		position: relative
+		transition: all .6s
+
+		&:hover
+			span
+				background: #fff
+
+		span
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translate(50%, -50%)
+			display: block
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			transition: all .6s
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				background: #000
+				transition: all .6s
+
+			&::before
+				width: 1px
+				height: 24px
+
+			&::after
+				width: 24px
+				height: 1px
+
+		&--active
+			span
+				transform: translate(50%, -50%) rotate(-45deg)
+
+
+	&__content
+		margin-top: 25px
+		font-size: 16px
+		font-weight: 300
+
+
+.policy
+	font-size: 20px
+
+	h3
+		font-size: 20px
+		margin-bottom: 25px
+
+	p
+		margin-bottom: 30px
+		font-weight: 300
+
+	li
+		position: relative
+		padding-left: 10px
+		font-weight: 300
+
+		&::before
+			content: '*'
+			position: absolute
+			top: 0
+			left: 0
+
+
+.footer
+	background: #6148aa
+	padding: 10px 40px
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__nav
+		a
+			text-transform: none
+
+	&__up
+
+
+
+
+@import "page"
+@import "media" // Always at the end
