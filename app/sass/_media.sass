@@ -1,10 +1,72 @@
 
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1300px)
+
+	.nav
+		li
+			margin-right: 15px
+
+		a
+			font-size: 14px
 
 	.header
+		padding: 15px
+
+		&__logo
+			width: 200px
+
+			img
+				width: 100%
+
+		&__nav
+			margin: 0 15px
+
+		&__call
+			font-size: 12px
+
+
+@media only screen and (max-width : 1200px)
+
+	h1
+		font-size: 42px
+		br
+			display: none
+
+	h2
+		font-size: 26px
+
+	h3
+		font-size: 18px
+
+
+	.footer
+		padding: 15px
+
+		&__call
+			font-size: 14px
 
 
 @media only screen and (max-width : 992px)
+	.header
+		&__container
+			padding-right: 60px
+
+		&__nav
+			margin: 0
+
+
+	.internet__item 
+		padding-left: 65px
+
+	.block
+		padding: 15px 20px 15px 0
+
+		h3
+			font-size: 16px
+
+		&__header span
+			width: 35px
+			height: 35px
+
 
 	.nav
 		position: fixed
@@ -13,9 +75,9 @@
 		height: 100%
 		flex-direction: column
 		right: -100%
-		top: 80px
+		top: 72px
 		z-index: -1
-		background: rgba(0, 0, 0, .9)
+		background: linear-gradient(bottom, rgba(#a56b9c, .9), rgba(#7050a6, .9))
 		transition: all .3s
 
 		ul
@@ -38,16 +100,85 @@
 	.hamburger
 		display: block
 
+	
+	.filter
+		&__item
+			width: 100%
+
+		&__button
+			margin-bottom: 10px
+			padding: 0 15px
 
 
 @media only screen and (max-width : 767px)
-	.header
+	.header__logo
+		width: 180px
+
+	h1
+		font-size: 28px
+
+	.hero__form_item,
+	.shape__form .hero__form_item
+		width: 100%
+
+	.btn--form
+		min-width: 200px
+
+	.nav
+		top: 59px
+
+	.policy
+		font-size: 14px
+
+		p, h3
+			margin-bottom: 10px
+	
+	.main
+		padding: 100px 0 60px 0 
 
 @media only screen and (max-width : 576px)
+	.header__call
+		display: none
+
+	.nav__call
+		display: block
+		margin: 20px 40px
+
+		.btn
+			color: #000
+
 	.header
+		overflow: hidden
+
+	.filter__item
+		width: auto
+
+	.hero
+		padding: 80px 0
+
+	.filter__text p
+		width: 100%
+
 
 @media only screen and (max-width : 480px)
-	.header
+	.filter
+		margin-bottom: 30px
+
+		&__img img
+			margin-bottom: 10px
+	
+	.hero
+		margin-bottom: 30px
+
+	.header__logo
+		width: 130px
+
+	.nav
+		top: 53px
+
+		
+
+
 
 
 

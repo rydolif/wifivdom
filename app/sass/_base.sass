@@ -21,6 +21,7 @@ body
 	color: #fff
 	line-height: 1.6
 	font-weight: 400
+	overflow-x: hidden
 
 ::selection
 	background-color: $accent
@@ -90,6 +91,16 @@ input, textarea, option, select
 		color: #808080
 		font-size: 16px
 		line-height: 1
+
+textarea
+	height: 150px
+	line-height: 1.4
+	padding: 10px 20px
+
+	&::placeholder
+		color: #808080
+		font-size: 16px
+		line-height: 1.4
 
 b, strong
 	font-weight: 700

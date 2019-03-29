@@ -26,12 +26,18 @@
 		align-items: center
 	
 	&__call
+		display: flex
 		text-align: right
 		line-height: 1.2
 		font-size: 15px
 
+		div
+			display: flex
+			flex-direction: column
+			margin-right: 5px
+
 	&__nav
-		margin: 0 10%
+		margin: 0 30px
 
 	
 .nav
@@ -56,6 +62,12 @@
 		text-decoration: underline
 		color: #f5f5f5
 
+	&__call
+		display: none
+
+		a
+			color: #000
+
 
 .hero
 	background: linear-gradient(top, rgba(#a56b9c, 1), rgba(#7050a6, 1))
@@ -64,6 +76,7 @@
 	padding: 15% 0
 	text-align: center
 	min-height: 100vh
+	margin-bottom: 60px
 
 	&__sub-title
 		font-size: 20px
@@ -86,9 +99,97 @@
 			width: 100%
 
 .filter
+	position: relative
 	margin-bottom: 60px
+	padding: 60px 0
+	background: linear-gradient(top, rgba(#a56b9c, 1), rgba(#7050a6, 1))
+	background-size: cover
+	background-repeat: no-repeat
 
+	h3
+		margin-bottom: 10px
 
+	&__wrap
+		position: absolute
+		top: -80px
+		width: 100vw
+		height: 60px
+
+		&::before
+			content: ''
+			border-bottom: 60px solid #a56b9c
+			border-left: 0px solid transparent
+			border-right: 100vw solid transparent
+			border-top: 40px solid transparent
+
+	&__item
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		background: #810b44
+		border: 2px solid #d4c5eb
+		border-radius: 10px
+		width: 48%
+		margin: 0 1% 15px
+		padding: 15px
+
+	&__img
+		width: 130px
+
+		img
+			width: 100%
+
+	&__price
+		text-align: right
+		margin: 10px 0
+		font-size: 26px
+		color: #c9ffbf
+		font-weight: 700
+
+	&__button
+		position: relative
+		display: inline-block
+		height: 40px
+		border: none
+		outline: none
+		padding: 0 30px
+		border-radius: 40px
+		background: #fff
+		text-align: center
+		font-size: 12px
+		color: #000
+		line-height: 40px
+		font-weight: 700
+		letter-spacing: .2px
+		transition: all .6s
+		margin-right: 10px
+
+		&:hover,
+		&:focus
+			outline: none
+			border: none
+			text-decoration: none
+			cursor: pointer
+			transition: all .3s
+			box-shadow: 0 5px 10px rgba($text, .4)
+			color: #fff
+			background: #4458af
+	
+	&__nav
+		margin-bottom: 15px
+
+	&__text
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+		img
+			width: 26px
+			margin-right: 5px
+
+		p
+			margin-bottom: 5px
+			width: 48%
 
 .shape
 	position: relative
@@ -110,6 +211,13 @@
 			border-left: 0px solid transparent
 			border-right: 100vw solid transparent
 			border-top: 40px solid transparent
+
+	&__form
+		.hero__form_item
+			width: 27%
+
+	a
+		color: #fc8877
 
 
 .main

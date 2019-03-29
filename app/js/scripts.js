@@ -2469,6 +2469,42 @@ S:{pattern:/[a-zA-Z]/}}};a.jMaskGlobals=a.jMaskGlobals||{};h=a.jMaskGlobals=a.ex
 $(function() {
 
 
+//-------------------------------isotope---------------------------------------
+  var $grid = $('.menu__grid').imagesLoaded( function() {
+    // init Isotope after all images have loaded
+    $grid.isotope({
+      itemSelector: '.filter__item',
+      layoutMode: 'fitRows',
+      getSortData: {
+        name: '.name',
+        symbol: '.symbol',
+        number: '.number parseInt',
+        category: '[data-category]',
+        weight: function( itemElem ) {
+          var weight = $( itemElem ).find('.weight').text();
+          return parseFloat( weight.replace( /[\(\)]/g, '') );
+        }
+      }
+    });
+  });
+
+  // filter functions
+  var filterFns = {
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
+
+  // bind filter button click
+  $('#filters').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $grid.isotope({ filter: filterValue });
+  });
+
+
 //-------------------------------активна ссилка на якій знаходишся для меню---------------------------------------
   $('.nav ul li a').each(function () {
       var location = window.location.href;
@@ -2528,11 +2564,13 @@ $(function() {
       messages: {
         name: "Введите Ваше имя",
         phone: "Введите Ваш телефон",
+        adress: "Введите Ваш адрес",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          adress: jQuery('.form-' + index).find("input[name=adress]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
