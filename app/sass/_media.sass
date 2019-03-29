@@ -43,7 +43,9 @@
 
 		&__call
 			font-size: 14px
-
+	
+	.hero
+		min-height: 100%
 
 @media only screen and (max-width : 992px)
 	.header
@@ -136,6 +138,7 @@
 	.main
 		padding: 100px 0 60px 0 
 
+
 @media only screen and (max-width : 576px)
 	.header__call
 		display: none
@@ -159,24 +162,47 @@
 	.filter__text p
 		width: 100%
 
+	.modal
+		padding: 40px 20px
+		
+		&--content
+			img
+				float: none
+				margin: 0 auto
+				display: block
+
 
 @media only screen and (max-width : 480px)
 	.filter
-		margin-bottom: 30px
+		padding-bottom: 30px
+		margin-bottom: 0
 
 		&__img img
 			margin-bottom: 10px
-	
+
+		&__btn
+			display: flex
+			flex-direction: column
+
+			a
+				margin-bottom: 10px
+
+				&:last-child
+					margin-bottom: 0
 	.hero
-		margin-bottom: 30px
+		margin-bottom: 0
 
 	.header__logo
 		width: 130px
 
 	.nav
 		top: 53px
-
-		
+	
+	.shape
+		padding-top: 30px
+		&__wrap::before
+			display: none
+			
 
 
 
