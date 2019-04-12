@@ -31,6 +31,9 @@
 		br
 			display: none
 
+	.shape h2
+		font-size: 42px
+
 	h2
 		font-size: 26px
 
@@ -47,7 +50,18 @@
 	.hero
 		min-height: 100%
 
+	.filter
+		&__text
+			width: 50%
+
+
 @media only screen and (max-width : 992px)
+	.shape__form .hero__form_item
+		width: 100%
+
+	.hero__form_item
+		width: 50%
+
 	.header
 		&__container
 			padding-right: 60px
@@ -111,12 +125,18 @@
 			margin-bottom: 10px
 			padding: 0 15px
 
+		&__price
+			font-size: 24px
+
 
 @media only screen and (max-width : 767px)
 	.header__logo
 		width: 180px
 
 	h1
+		font-size: 28px
+
+	.shape h2
 		font-size: 28px
 
 	.hero__form_item,
@@ -138,8 +158,29 @@
 	.main
 		padding: 100px 0 60px 0 
 
+	.hero__form
+		justify-content: center
+		&_item:nth-child(2)
+			width: 100%
+
+	.filter
+		&__item
+			flex-wrap: wrap
+
+		&__btn
+			width: 100%
+
+		&__text
+			width: 70%
+
 
 @media only screen and (max-width : 576px)
+	.hero
+		padding-bottom: 0
+
+	.filter
+		padding-top: 0
+		
 	.header__call
 		display: none
 
@@ -189,6 +230,11 @@
 
 				&:last-child
 					margin-bottom: 0
+
+		&__text
+			width: 100%
+
+
 	.hero
 		margin-bottom: 0
 
